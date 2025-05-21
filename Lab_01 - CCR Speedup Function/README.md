@@ -23,6 +23,7 @@ where:
 - k: problem size parameter (fixed at 10)
 
 ## Results
+![speedup_plot.png](speedup_plot.png)  
 The implementation generates a 3D surface plot (`speedup_plot.png`) showing:
 - X-axis: Number of processors (2^q)
 - Y-axis: Compute-to-communication ratio (γ)
