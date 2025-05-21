@@ -129,6 +129,3 @@ int main() {
     
     return 0;
 }
-
-
-//Share Riemann Zeta Parallelization

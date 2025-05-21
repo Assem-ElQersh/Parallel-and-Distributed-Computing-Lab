@@ -71,17 +71,3 @@ int main() {
 
     return 0;
 }
-
-/*
-Runtime Comparison and Explanation:
-1. **Without Transpose (Case 1)**:
-    - The multiplication accesses `B[k*N + j]`, which jumps across large memory strides.
-    - Leads to **cache inefficiency** due to frequent cache misses.
-    - Expected to take longer execution time.
-
-2. **With Transpose (Case 2)**:
-    - `B` is transposed to `Bt`, ensuring **sequential memory access**.
-    - Accessing `Bt[j*N + k]` results in improved **cache locality**.
-    - While transposing takes `O(N²)`, it is negligible compared to `O(N³)` multiplication.
-    - Expected to be **faster** than Case 1.
-*/

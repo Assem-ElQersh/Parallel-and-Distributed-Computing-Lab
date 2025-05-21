@@ -130,25 +130,6 @@ int main() {
         double slowdown = elapsed2.count() / elapsed1.count();
         std::cout << "Slowdown from transposition: " << slowdown << "x\n\n";
     }
-    
-    // Analysis
-    std::cout << "ANALYSIS:\n";
-    std::cout << "1. Matrix Transposition Effect:\n";
-    std::cout << "   - When B is transposed, the inner loop accesses both A and B_T in row-major order\n";
-    std::cout << "   - This improves cache locality and reduces cache misses\n";
-    std::cout << "   - The transposition itself has an overhead cost of " << transpose_time.count() << " seconds\n";
-    std::cout << "   - For large matrices, this overhead is typically worth the performance gain\n\n";
-    
-    std::cout << "2. AVX Implementation Note:\n";
-    std::cout << "   - This implementation doesn't use AVX instructions due to compiler limitations\n";
-    std::cout << "   - For AVX support, compile with: g++ -mavx -mavx2 -mfma filename.cpp\n";
-    std::cout << "   - AVX would provide additional speedup by processing multiple elements in parallel\n\n";
-    
-    std::cout << "3. Memory Access Patterns:\n";
-    std::cout << "   - Method 1: A is accessed sequentially, B is accessed with stride N\n";
-    std::cout << "   - Method 2: Both A and B_T are accessed sequentially\n";
-    std::cout << "   - Sequential access patterns are much more efficient for CPU cache utilization\n";
-    std::cout << "   - This is why Method 2 is typically faster despite the transposition overhead\n";
 
     // Free allocated memory
     delete[] A;

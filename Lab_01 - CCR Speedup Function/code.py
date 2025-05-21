@@ -3,7 +3,7 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
 
-def compute_speedup(gamma, q, k=10):
+def compute_speedup(gamma, q, k=10): # n = 2^k so k = log2(n) , n = 1024
     numerator = gamma * (2**k - 1)
     denominator = 2 * q + gamma * (2**(k - q) - 1 + q)
     denominator = np.where(denominator <= 0, np.nan, denominator)
