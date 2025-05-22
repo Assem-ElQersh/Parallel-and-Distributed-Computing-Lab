@@ -37,7 +37,6 @@ Implement and analyze CUDA-accelerated vector operations, focusing on:
 ### Test Configuration
 - Vector size: 2^24 elements
 - GPU: Tesla T4
-- CPU: [Your CPU specifications]
 - CUDA Version: 12.5
 
 ### Results
